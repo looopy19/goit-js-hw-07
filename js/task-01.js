@@ -1,23 +1,14 @@
-const listItemsRef = document.querySelectorAll('.item');
-console.log(`В списке ${listItemsRef.length} категории.`);
+const listItemsRef = document.querySelector('ul#categories');
+const itemRef = listItemsRef.querySelectorAll('li.item');
+console.log(`В списке ${itemRef.length} категории.`);
+
+itemRef.forEach((item) => {
+    const header = item.querySelector('h2').textContent;
+    const itemsAmount = item.querySelectorAll('li').length;
+
+    console.log(`Категория: ${header}`);
+    console.log(`Количество элементов: ${itemsAmount}`);
+ });
 
 
 
-const animalsListTitlesRef = document.querySelector('.animals');
-const animalsItemsQuantityRef = document.querySelector('.animals-list');
-
-const foodListTitlesRef = document.querySelector('.food');
-const foodItemsQuantityRef = document.querySelector('.food-list');
-
-const techListTitlesRef = document.querySelector('.tech');
-const techItemsQuantityRef = document.querySelector('.tech-list');
-
-
-console.log(`Категория: ${animalsListTitlesRef.textContent}`);
-console.log(`Количество элементов: ${animalsItemsQuantityRef.children.length}`);
-
-console.log(`Категория: ${foodListTitlesRef.textContent}`);
-console.log(`Количество элементов: ${foodItemsQuantityRef.children.length}`);
-
-console.log(`Категория: ${techListTitlesRef.textContent}`);
-console.log(`Количество элементов: ${techItemsQuantityRef.children.length}`);

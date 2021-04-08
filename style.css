@@ -21,3 +21,9 @@ p {
   align-items: center;
   justify-content: space-between;
 }
+
+.img_task3 {
+  object-fit: cover;
+  width: 320px;
+  height: 240px;
+}
